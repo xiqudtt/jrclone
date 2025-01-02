@@ -3,6 +3,7 @@ import "../CSS/Sidebar.css";
 import logo from '../assets/sidebar-jr-logo.svg';
 import imgUrl from '../assets/icons8-forward-16.png';
 import { FaUniversity } from "react-icons/fa";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Sidebar = () => {
     const [dropdowns, setDropdowns] = useState({}); // Для управления открытия меню
@@ -36,9 +37,7 @@ const Sidebar = () => {
                                 <FaUniversity className="icon" /> Университет
                             </div>
                             <button className="sidebar-item-toggle">
-                                <img
-                                    src={imgUrl}
-                                    alt="logo"
+                                <MdKeyboardArrowDown
                                     className={`forward-img ${rotations["university"] ? 'rotated' : ''}`}
                                 />
                             </button>
@@ -64,9 +63,7 @@ const Sidebar = () => {
                                 Обучение
                             </div>
                             <button className="sidebar-item-toggle">
-                                <img
-                                    src={imgUrl}
-                                    alt="logo"
+                                <MdKeyboardArrowDown
                                     className={`forward-img ${rotations["education"] ? 'rotated' : ''}`}
                                 />
                             </button>
@@ -92,9 +89,7 @@ const Sidebar = () => {
                                 Сообщество
                             </div>
                             <button className="sidebar-item-toggle">
-                                <img
-                                    src={imgUrl}
-                                    alt="logo"
+                                <MdKeyboardArrowDown
                                     className={`forward-img ${rotations["community"] ? 'rotated' : ''}`}
                                 />
                             </button>

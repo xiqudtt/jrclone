@@ -1,6 +1,5 @@
 import React from "react";
 
-import background from "../assets/i.png"
 import Sidebar from "./Sidebar";
 import "../CSS/Layout.css";
 import Header from "./header.jsx";

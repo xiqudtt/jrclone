@@ -5,7 +5,10 @@
     --secondary-color: #9e9e9e;
     --font-family: "Montserrat", sans-serif;
 }
-
+svg{
+    width: 100%;
+    height: auto;
+}
 body {
     background-color: var(--main-bg-color);
     color: var(--text-color);
@@ -21,13 +24,15 @@ body {
     align-items: center;
     padding: 60px 40px;
     max-width: 100%;
-    height: 100vh
+    height: 100vh;
 }
+
 @media (max-height: 600px) {
     .promo-section {
         padding: 40px 20px;
     }
 }
+
 .promo-content {
     max-width: 50%;
 }
@@ -100,16 +105,19 @@ body {
 
 .promo-ribbon {
     position: absolute;
-    top: -250px;
-    left: 700px; /* Смещаем ленточку влево */
-    z-index: -1; /* Ленточка располагается под контентом */
+    top: -150px;  /* Смещаем ленточку вверх */
+    right: 0;     /* Размещаем ленточку по правому краю */
+    z-index: -1;  /* Ленточка располагается под контентом */
     width: 900px;
+    left: 800px;
     height: auto;
-    opacity: 0.8;
+    opacity: 1;
+    overflow-x: visible;  /* Разрешаем выходить изображению по горизонтали */
+    overflow-y: hidden;   /* Запрещаем выходить изображению по вертикали */
 }
 
 .promo-ribbon svg {
-    width: 900px;
+    width: 100%;
     height: auto;
+    object-fit: cover;
 }
-

@@ -30,7 +30,3 @@
     z-index: 0; /* Ленточка располагается под контентом */
     width: 100%;
 }
-.content svg{
-    width: 100%;
-    height: auto;
-}

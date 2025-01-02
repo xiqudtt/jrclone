@@ -97,13 +97,10 @@
     line-height: 1.4;
 }
 
-/* SVG */
-svg {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 30px;
-}
 .course-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-top: 20px;
 }
 .start-button {
@@ -111,6 +108,9 @@ svg {
     background-color: #c7ff4b;
     color: #0d1117;
     font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 15px 30px;
     border: none;
     border-radius: 8px;
@@ -120,4 +120,17 @@ svg {
 }
 .start-button:hover{
     background-color: #d1fd70;
+}
+
+.button-arrow {
+    font-size: 12px; /* Устанавливаем размер стрелки */
+    width: 27px;
+    height: 27px;
+    margin-left: 5px;
+    transition: all 0.3s ease; /* Для плавности при изменении */
+
+}
+
+.start-button:hover .button-arrow {
+    font-size: 16px; /* Изменение размера при наведении (если нужно) */
 }
