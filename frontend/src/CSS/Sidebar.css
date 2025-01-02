@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+
+
+:root {
+    --page-font-family: "Montserrat", serif;
+    --main-color: #11131b
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 260px;
+    height: 100vh;
+    background-color: var(--main-color);
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 20px;
+    z-index: 1000;
+    font-family: var(--page-font-family);
+}
+.header-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2em;
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+
+}
+
+.sidebar-logo {
+    max-width: 100%;
+    height: auto;
+
+}
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-nav-item {
+    cursor: pointer;
+    margin-bottom: 1em;
+    border: none;
+    background: none;
+}
+
+.sidebar-item-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5em 1em;
+    background-color: var(--main-color);
+    transition: background-color 0.3s ease;
+}
+
+.sidebar-item-container:hover {
+    background-color: var(--main-color);
+}
+
+.sidebar-item-text {
+    font-size: 16px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar-item-text .icon {
+    font-size: 30px; /* Размер иконки */
+    margin-right: 10px;
+}
+
+.sidebar-item-toggle {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: all 0.3s;
+    overflow: auto;
+}
+.sidebar-item-toggle img {
+    width: 150px;
+    aspect-ratio: 1 / 1;
+    object-fit: contain;
+    filter: brightness(0);
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+.forward-img {
+    transition: transform 0.3s ease;
+}
+
+/* Вращаем только активные картинки */
+.forward-img.rotated {
+    transform: rotate(90deg); /* Поворот на 180 градусов */
+}
+.dropdown-list {
+    list-style: none;
+    padding: 0.5em 1.5em;
+    margin: 0;
+    background-color: var(--main-color);
+    border-left: 2px solid #ccc;
+}
+
+.dropdown-item {
+    margin-bottom: 0.5em;
+}
+
+.dropdown-link {
+    text-decoration: none;
+    color: #ccc;
+    font-size: 14px;
+}
+
+.dropdown-link:hover {
+    color: #ff5722;
+    text-decoration: underline;
+}
+
+.forward-img {
+    transform: rotate(270deg);
+    scale: 0.7;
+    filter: brightness(10);
+}
+
+.logos-container img:hover {
+    opacity: 0.8;
+}
+
+.sidebar-nav-item.active .sidebar-item-container.active {
+    background-color: var(--main-color);
+}

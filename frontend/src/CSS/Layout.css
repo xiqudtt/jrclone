@@ -1,0 +1,36 @@
+/* Layout.css */
+.layout {
+    display: flex;
+    flex-direction: column; /* Header на верх */
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+}
+
+.main-content {
+    flex: 1;
+
+    background-color: #f4f4f4;
+    margin-left: 260px; /* Оставляем место для Sidebar */
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+}
+.content{
+    z-index: 0; /* Ленточка располагается под контентом */
+    width: 100%;
+}
+.content svg{
+    width: 100%;
+    height: auto;
+}

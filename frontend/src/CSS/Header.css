@@ -1,0 +1,104 @@
+:root {
+    --header-bg-color: #0d1117; /* Тёмный фон */
+    --header-text-color: #cfcfcf;
+    --header-accent-color: #C7FF4B;
+    --font-family: "Montserrat", sans-serif;
+}
+
+.header {
+    width: calc(100% - 260px);
+    background: transparent;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-left: 260px;
+    z-index: 100;
+    box-sizing: border-box; /* Учитываем отступы */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.header.scrolled {
+    position: fixed;
+    background-color: var(--header-bg-color); /* Тёмный фон */
+    opacity: 80%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+}
+
+.header-container {
+    width: 100%;
+    max-width: 1200px; /* Увеличиваем, чтобы центрировать элементы */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px; /* Добавляем немного внутреннего отступа */
+    box-sizing: border-box;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Центрируем */
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Расстояние между элементами */
+    padding: 0;
+    margin: 0;
+}
+
+.nav-item {
+    font-family: var(--font-family);
+}
+
+.nav-link {
+    display: inline-block;
+    color: var(--header-text-color);
+    text-decoration: none;
+    font-size: 16px;
+    background-color: transparent;
+    padding: 10px 15px;
+    border: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    cursor: pointer;
+    color: #ffff;
+}
+
+.nav-link.active {
+    font-weight: bold;
+    color: var(--header-accent-color);
+    text-decoration: underline;
+}
+
+.cta {
+    margin-left: auto;
+    margin-right: 150px;
+    transition: margin-right 0.3s ease;
+}
+
+.cta.scrolled {
+    margin-right: 0; /* При скролле убираем отступ */
+}
+
+.cta-button {
+    background-color: transparent;
+    border: 2px solid var(--header-accent-color);
+    color: var(--header-accent-color);
+    font-family: var(--font-family);
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 2s ease;
+}
+
+.cta-button:hover {
+    background-color: var(--header-accent-color);
+    color: var(--header-bg-color);
+}
