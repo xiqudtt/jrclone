@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../../CSS/Header.css";
 import Nav from "./Nav";
-import CTA from "./CTA";
+import CTA from "./Cta";
 
 const Header = () => {
     const [scrolled, setScrolled] = useState(false);
