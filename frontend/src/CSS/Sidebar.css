@@ -132,7 +132,6 @@
 }
 
 .dropdown-item {
-    padding: 5px;
     margin-bottom: 0.5em;
 }
 
@@ -141,7 +140,7 @@
     text-decoration: none;
     color: #ccc;
     font-size: 14px;
-    padding: 0.5em 1em; /* Добавим немного отступов для кликабельности */
+    padding: 0.2em 1em;
 }
 
 

@@ -4,7 +4,6 @@ import React from "react";
 
 export default function FirstSection() {
     return (<>
-
             <section className="promo-section">
                 <div className="promo-content">
                     <p className="promo-subtitle">КУРСЫ JAVA ОНЛАЙН</p>

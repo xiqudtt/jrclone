@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 
-import Sidebar from "./Sidebar";
+import Sidebar from "./SideBar/Sidebar.jsx";
 import "../CSS/Layout.css";
 import Header from "./header.jsx";
 import FirstSection from "./firstSection.jsx";
