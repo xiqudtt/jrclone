@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef } from "react";
 import Sidebar from "./SideBar/Sidebar.jsx";
 import "../CSS/Layout.css";
 import Header from "./header.jsx";
-import FirstSection from "./firstSection.jsx";
+import FirstSection from "./FirstSection/FirstSection.jsx";
 import CourseSection from "./СourseSection.jsx";
 
 const Layout = () => {
