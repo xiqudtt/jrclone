@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 
 import Sidebar from "./SideBar/Sidebar.jsx";
 import "../CSS/Layout.css";
-import Header from "./Header/header.jsx";
+import Header from "./Header/Header.jsx";
 import FirstSection from "./FirstSection/FirstSection.jsx";
 import CourseSection from "./CourseSection/СourseSection.jsx";
 
