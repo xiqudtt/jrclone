@@ -1,10 +1,8 @@
-/* Layout.css */
+
 .layout {
     display: flex;
-    flex-direction: column; /* Header на верх */
+    flex-direction: column;
     height: 100vh;
-
-   
 }
 
 .content {
@@ -15,7 +13,13 @@
 .main-content {
     flex: 1;
     background-color: #ffffff;
-    margin-left: 220px; /* Оставляем место для Sidebar */
+    margin-left: 220px;
     position: relative;
+}
+
+@media (max-width: 1300px) {
+    .main-content{
+        margin-left: 0;
+    }
 }
 

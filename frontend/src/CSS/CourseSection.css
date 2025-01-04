@@ -1,10 +1,10 @@
-/* Основные контейнеры */
+
 .course-section {
     background: transparent;
     padding: 50px 20px;
     text-align: center;
     z-index: -1;
-    background: #fff;
+
 }
 
 .course-content {
@@ -47,7 +47,6 @@
     margin-bottom: 30px;
 }
 
-/* Изображение */
 .picture-way img {
     max-width: 100%;
     height: auto;
@@ -55,7 +54,7 @@
     margin: 30px auto;
 }
 
-/* Шаги */
+
 .course-steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

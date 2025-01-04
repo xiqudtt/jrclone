@@ -29,7 +29,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 80px 60px;
-    max-width: 100%;
+    width: 100%;
     height: 100%;
     overflow: hidden;
 }
@@ -63,7 +63,7 @@ body {
     margin-bottom: 30px;
 }
 
-/* Статистика */
+
 .promo-stats {
     display: flex;
     gap: 25px;
@@ -91,7 +91,7 @@ body {
     color: var(--secondary-color);
 }
 
-/* Кнопка */
+
 .promo-button {
     background-color: transparent;
     color: var(--accent-color);
@@ -127,7 +127,7 @@ body {
     margin-top: 2rem;
 }
 
-/* Лента */
+
 .promo-ribbon {
     position: absolute;
     top: -150px;
@@ -149,34 +149,62 @@ body {
 
 
 
-
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .promo-section {
-        padding: 50px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 50px 20px;
+        background-color: var(--main-bg-color);
+        text-align: center;
     }
-
+    .code-block {
+        display: flex;
+        height: auto;
+        width: 100%;
+        padding-left: 20px;
+        transition: all 0.3s ease;
+    }
     .promo-content {
-        max-width: 60%;
+        max-width: 100%;
+        padding: 0;
     }
 
     .promo-title {
-        font-size: 2.5em;
+        font-size: 2em;
+        margin-bottom: 20px;
     }
 
     .promo-description {
         font-size: 1em;
+        margin-bottom: 20px;
+    }
+
+    .promo-stats {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 20px;
     }
 
     .promo-button {
         font-size: 1em;
-        padding: 15px 25px;
+        padding: 12px 25px;
     }
 
-    .promo-ribbon {
-        width: 80vw;
-    }
+
+
 }
 
+@media (max-width: 1200px){
+    .promo-ribbon{
+        display: none;
+    }
+    .code-block{
+        display: none;
+    }
+}
 @media (max-width: 768px) {
     .promo-section {
         padding: 40px 25px;

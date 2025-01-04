@@ -41,9 +41,9 @@ const Sidebar = () => {
                         rotations={rotations}
                         toggleDropdown={toggleDropdown}
                         links={[
-                            { url: "/subscriptions/plan1", label: "План 1" },
-                            { url: "/subscriptions/plan2", label: "План 2" },
-                            { url: "/subscriptions/plan3", label: "План 3" }
+                            { url: "/subscriptions/plan1", label: "Элемент 1" },
+                            { url: "/subscriptions/plan2", label: "Элемент 2" },
+                            { url: "/subscriptions/plan3", label: "Элемент 3" }
                         ]}
                     />
                     <SidebarItem
@@ -53,8 +53,8 @@ const Sidebar = () => {
                         rotations={rotations}
                         toggleDropdown={toggleDropdown}
                         links={[
-                            { url: "/subscriptions/plan1", label: "План 1" },
-                            { url: "/subscriptions/plan2", label: "План 2" }
+                            { url: "/subscriptions/plan1", label: "Элемент 1" },
+                            { url: "/subscriptions/plan2", label: "Элемент 2" }
                         ]}
                     />
                     <SidebarItem
@@ -64,8 +64,15 @@ const Sidebar = () => {
                         rotations={rotations}
                         toggleDropdown={toggleDropdown}
                         links={[
-                            { url: "/subscriptions/plan1", label: "План 1" },
-                            { url: "/subscriptions/plan2", label: "План 2" }
+                            { url: "/subscriptions/plan1", label: "Элемент 1" },
+                            { url: "/subscriptions/plan2", label: "Элемент 2" },
+                            { url: "/subscriptions/plan1", label: "Элемент 3" },
+                            { url: "/subscriptions/plan2", label: "Элемент 4" },
+                            { url: "/subscriptions/plan3", label: "Элемент 5" },
+                            { url: "/subscriptions/plan1", label: "Элемент 1" },
+                            { url: "/subscriptions/plan2", label: "Элемент 2" },
+                            { url: "/subscriptions/plan1", label: "Элемент 3" },
+                            { url: "/subscriptions/plan2", label: "Элемент 4" },
                         ]}
                     />
                     <li className="sidebar-nav-item">

@@ -16,12 +16,32 @@
     background-color: var(--main-color);
     color: #fff;
     display: flex;
+    overflow-y: auto;
     flex-direction: column;
     justify-content: flex-start;
+
     padding: 20px;
     z-index: 1000;
     font-family: var(--page-font-family);
 }
+.sidebar::-webkit-scrollbar {
+    width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, .5) ;
+    border-radius: 10px;
+    background-clip: content-box;
+    border: none;
+}
+
+
+.sidebar::-webkit-scrollbar-track {
+    background-color: rgba(18, 28, 36, .8);
+
+    border-radius: 10px;
+}
+
 .header-logo{
     display: flex;
     justify-content: center;
@@ -50,8 +70,9 @@
     list-style: none;
     padding: 0;
     margin: 0;
+    flex-grow: 1;
+    max-height: calc(100vh - 40px);
 }
-
 .sidebar-nav-item {
     cursor: pointer;
     margin-bottom: 1em;
@@ -80,7 +101,7 @@
 }
 
 .sidebar-item-text .icon {
-    font-size: 30px; /* Размер иконки */
+    font-size: 30px;
     margin-right: 10px;
 }
 
@@ -108,9 +129,9 @@
 
 .forward-img {
     opacity: 0;
-    transition: opacity 0.3s ease; /* Плавное появление стрелочки */
+    transition: opacity 0.3s ease;
 }
-/* Вращаем только активные картинки */
+
 .forward-img.rotated {
     transform: rotate(180deg);
 }
@@ -122,13 +143,13 @@
     border-left: 2px solid #ccc;
 }
 .sidebar-item-container:hover {
-    background-color: #333; /* Подсветка при ховере */
+    background-color: #333;
 }
 .dropdown-item:hover {
     background-color: #333;
 }
 .sidebar-item-container:hover .forward-img {
-    opacity: 1; /* Показываем стрелочку */
+    opacity: 1;
 }
 
 .dropdown-item {
@@ -136,13 +157,12 @@
 }
 
 .dropdown-link {
-    display: block; /* Делаем ссылку блочной, чтобы она занимала всю ширину блока */
+    display: block;
     text-decoration: none;
     color: #ccc;
     font-size: 14px;
     padding: 0.2em 1em;
 }
-
 
 
 .forward-img {
@@ -157,7 +177,9 @@
 .sidebar-nav-item.active .sidebar-item-container.active {
     background-color: var(--main-color);
 }
-@media (max-width: 768px) {
+
+
+@media (max-width: 1300px) {
     .sidebar {
         position: absolute;
         top: 0;
@@ -165,7 +187,7 @@
         width: 100%;
         height: 100vh;
         transform: translateX(-100%);
-        transition: transform 0.3s ease;
+        transition: transform 0.1s ease;
     }
 
     .sidebar.show {
@@ -197,26 +219,25 @@
         margin-bottom: 20px;
     }
 
-    .header-logo .hamburger {
+    .header-logo{
         font-size: 30px;
         cursor: pointer;
         display: block;
     }
 }
 
-/* При увеличении масштаба экрана выше 120% скрываем сайдбар */
-@media (min-width: 1024px) and (max-width: 1300px) {
+@media (min-width: 1024px) and (max-width: 1500px) {
     .sidebar {
         display: block;
     }
 
-    /* Элементы меню должны отображаться при масштабе больше 120% */
-    .header-logo .hamburger {
-        display: block; /* Оставляем иконку меню видимой */
+
+    .header-logo {
+        display: block;
     }
 }
 
-@media (min-width: 1300px) {
+@media (min-width: 1500px) {
     .sidebar {
         transform: translateX(0);
     }

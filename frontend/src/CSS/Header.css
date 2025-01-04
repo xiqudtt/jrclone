@@ -1,5 +1,5 @@
 :root {
-    --header-bg-color: #0d1117; /* Тёмный фон */
+    --header-bg-color: #0d1117;
     --header-text-color: #cfcfcf;
     --header-accent-color: #C7FF4B;
     --font-family: "Montserrat", sans-serif;
@@ -21,31 +21,31 @@
 
 .header.scrolled {
     position: fixed;
-    background-color: var(--header-bg-color); /* Тёмный фон */
+    background-color: var(--header-bg-color);
     opacity: 80%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Тень для выделения */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .header-container {
     width: 100%;
-    max-width: 1200px; /* Увеличиваем, чтобы центрировать элементы */
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px; /* Добавляем немного внутреннего отступа */
+    padding: 0 20px;
     box-sizing: border-box;
 }
 
 .nav {
     display: flex;
     align-items: center;
-    justify-content: center; /* Центрируем */
+    justify-content: center;
 }
 
 .nav-list {
     display: flex;
     list-style: none;
-    gap: 20px; /* Расстояние между элементами */
+    gap: 20px;
     padding: 0;
     margin: 0;
 }
@@ -70,7 +70,7 @@
     color: #ffff;
 }
 
-.nav-link.active {
+.nav-link:focus{
     font-weight: bold;
     color: var(--header-accent-color);
     text-decoration: underline;
@@ -84,7 +84,7 @@
 }
 
 .cta.scrolled {
-    margin-right: 0; /* При скролле убираем отступ */
+    margin-right: 0;
 }
 
 .cta-button {
@@ -102,4 +102,92 @@
 .cta-button:hover {
     background-color: var(--header-accent-color);
     color: var(--header-bg-color);
+}
+@media (max-width: 1300px){
+    .header{
+        width: 100%;
+        margin-left: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .header {
+        padding: 15px 20px;
+    }
+    .header.scrolled {
+        display: flex;
+        opacity: 0;
+    }
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+    }
+
+    .cta {
+        margin-right: 0;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-list {
+        align-items: center;
+    }
+
+    .nav-item {
+        text-align: center;
+    }
+
+    .cta {
+        margin-top: 15px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 8px 10px;
+    }
+
+    .header-container {
+        align-items: center;
+    }
+
+    .nav-list {
+        gap: 5px;
+    }
+
+    .cta-button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
