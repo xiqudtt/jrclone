@@ -2,9 +2,9 @@ import React, { useEffect, useState, useRef } from "react";
 
 import Sidebar from "./SideBar/Sidebar.jsx";
 import "../CSS/Layout.css";
-import Header from "./header.jsx";
+import Header from "./Header/header.jsx";
 import FirstSection from "./FirstSection/FirstSection.jsx";
-import CourseSection from "./СourseSection.jsx";
+import CourseSection from "./CourseSection/СourseSection.jsx";
 
 const Layout = () => {
     const [isFirstSectionVisible, setIsFirstSectionVisible] = useState(false);

@@ -1,5 +1,5 @@
 import React from "react";
-import "../CSS/Header.css";
+import "../../CSS/Header.css";
 import { useState, useEffect } from "react";
 
 const Header = () => {
