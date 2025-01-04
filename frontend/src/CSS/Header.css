@@ -6,16 +6,16 @@
 }
 
 .header {
-    width: calc(100% - 260px);
+    width: calc(100% - 220px);
     background: transparent;
     padding: 20px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
-    margin-left: 260px;
+    margin-left: 220px;
     z-index: 100;
-    box-sizing: border-box; /* Учитываем отступы */
+    box-sizing: border-box;
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -74,6 +74,7 @@
     font-weight: bold;
     color: var(--header-accent-color);
     text-decoration: underline;
+    text-decoration-style: wavy;
 }
 
 .cta {

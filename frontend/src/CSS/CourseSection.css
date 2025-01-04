@@ -1,20 +1,18 @@
 /* Основные контейнеры */
-.container {
-    position: relative;
-    width: 100%;
-    height: auto;
-}
-
 .course-section {
     background: transparent;
     padding: 50px 20px;
     text-align: center;
+    z-index: -1;
+    background: #fff;
 }
 
 .course-content {
+    position: relative;
     margin: 0 auto;
     max-width: 800px;
     text-align: left;
+    z-index: 2;
 }
 
 .course-label {
@@ -33,6 +31,7 @@
     font-weight: bold;
     margin: 20px 0 10px;
     color: #0D1117;
+    z-index: 5421;
 }
 
 .course-description {
@@ -123,14 +122,19 @@
 }
 
 .button-arrow {
-    font-size: 12px; /* Устанавливаем размер стрелки */
+    font-size: 12px;
     width: 27px;
     height: 27px;
     margin-left: 5px;
-    transition: all 0.3s ease; /* Для плавности при изменении */
+    transition: all 0.3s ease;
 
 }
 
 .start-button:hover .button-arrow {
-    font-size: 16px; /* Изменение размера при наведении (если нужно) */
+    scale: 1.1;
+}
+
+svg {
+    width: 100%;
+    height: auto;
 }

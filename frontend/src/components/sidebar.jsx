@@ -1,13 +1,20 @@
 import React, { useState } from "react";
 import "../CSS/Sidebar.css";
 import logo from '../assets/sidebar-jr-logo.svg';
-import imgUrl from '../assets/icons8-forward-16.png';
 import { FaUniversity } from "react-icons/fa";
 import { MdKeyboardArrowDown } from "react-icons/md";
 
 const Sidebar = () => {
-    const [dropdowns, setDropdowns] = useState({}); // Для управления открытия меню
-    const [rotations, setRotations] = useState({}); // Для управления поворотом картинок
+    const [dropdowns, setDropdowns] = useState({
+        university: true,
+        education: true,
+        community: true
+    });
+    const [rotations, setRotations] = useState({
+        university: true,
+        education: true,
+        community: true
+    });
 
     const toggleDropdown = (key) => {
         setDropdowns((prevState) => ({
@@ -24,8 +31,8 @@ const Sidebar = () => {
     return (
         <aside className="sidebar">
             <nav className="sidebar-nav">
-                <div className="header-logo">
-                    <img src={logo} alt="logo" className="logo-img" />
+                <div className="sidebar-header">
+                    <img src={logo} alt="logo" className="sidebar-logo" />
                 </div>
                 <ul className="sidebar-nav-list">
                     <li
@@ -45,10 +52,14 @@ const Sidebar = () => {
                         {dropdowns["university"] && (
                             <ul className="dropdown-list">
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan1" className="dropdown-link">План 1</a>
+                                    <a href="/subscriptions/plan1" className="dropdown-link">
+                                        План 1
+                                    </a>
                                 </li>
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan2" className="dropdown-link">План 2</a>
+                                    <a href="/subscriptions/plan2" className="dropdown-link">
+                                        План 2
+                                    </a>
                                 </li>
                             </ul>
                         )}
@@ -71,10 +82,14 @@ const Sidebar = () => {
                         {dropdowns["education"] && (
                             <ul className="dropdown-list">
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan1" className="dropdown-link">План 1</a>
+                                    <a href="/subscriptions/plan1" className="dropdown-link">
+                                        План 1
+                                    </a>
                                 </li>
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan2" className="dropdown-link">План 2</a>
+                                    <a href="/subscriptions/plan2" className="dropdown-link">
+                                        План 2
+                                    </a>
                                 </li>
                             </ul>
                         )}
@@ -97,22 +112,23 @@ const Sidebar = () => {
                         {dropdowns["community"] && (
                             <ul className="dropdown-list">
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan1" className="dropdown-link">План 1</a>
+                                    <a href="/subscriptions/plan1" className="dropdown-link">
+                                        План 1
+                                    </a>
                                 </li>
                                 <li className="dropdown-item">
-                                    <a href="/subscriptions/plan2" className="dropdown-link">План 2</a>
+                                    <a href="/subscriptions/plan2" className="dropdown-link">
+                                        План 2
+                                    </a>
                                 </li>
                             </ul>
                         )}
                     </li>
 
-                    <li
-                        className={`sidebar-nav-item ${dropdowns["subscriptions"] ? "active" : ""}`}
-                        onClick={() => toggleDropdown("subscriptions")}
-                    >
+                    <li className="sidebar-nav-item">
                         <div className="sidebar-item-container">
                             <div className="sidebar-item-text">
-                                Подписки
+                                <a href= "/followers" className="dropdown-link">Подписки</a>
                             </div>
                         </div>
                     </li>
